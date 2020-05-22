@@ -1,0 +1,11 @@
+left::right =>
+right is an associated function of left
+
+Left::right =>
+right is an associated function of Left type
+An associated function is implemented on a type, not on an instance.
+
+/* Bring the input/output library, which is part of the standard library, into scope as it is not part of the prelude.
+ * Create a mutable variable (variables are immutable by default), and bind it to a new instance of type String (which is empty by default)
+ * 
+ /
