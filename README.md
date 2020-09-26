@@ -33,6 +33,57 @@
   ```
 
 
+### CLI Commands
+
++ Create directory for the program:
+
+  `mkdir hello_world && cd hello_world`
+
++ Source code has to be in `main.rs`
+
++ Compile the file to get an executable:
+
+  `rustc main.rs`
+
++ Execute the binary executable:
+
+  `./main`
+
+
+### Using `Cargo`
+
+Cargo is Rust's build system and package manager and is used for project management. It handles a lot of tasks such as building code, downloading libraries the code depends on, as well as building those libraries.
+
++ Create project:
+
+  `cargo new hello_cargo && cd hello_cargo`
+
+  + `Cargo.toml` contains a list of configurations
+
+  + Inside the `src` directory, `main.rs` contains the source code
+
++ Create an executable file in target/debug/hello_cargo
+
+  `cargo build`
+
++ Run executable:
+
+  `./target/debug/hello_cargo`
+
++ The above two operations (compile and run) can also be done in one command:
+
+  `cargo run`
+
+  **NOTE**: Any change in the source file would make cargo rebuild it.
+
++ **Additionally**:
+
+  + For large projects, `cargo build` runs slow. To ensure faster compilation, without producing an executable, `cargo check` can be used.
+
+  + For production builds, a project can be compiled with optimizations using `cargo build --release`. The code will run faster but will increase the project's compile time.
+  This will create an executable in `target/release` instead of `target/debug`, which can be benchmarked with `./target/release/hello_cargo`
+
+
 ### (Minimal) Emacs Configuration for Rust
 
 + Add stable repository for MELPA in `init.el`:
@@ -65,17 +116,3 @@
 
   + Press `x` to install the selected package(s)
 
-
-### CLI Commands
-
-+ Create directory for a program:
-
-  `mkdir hello_world && cd hello_world`
-
-+ Compile the file to get an executable:
-
-  `rustc main.rs`
-
-+ Execute the binary executable:
-
-  `./main`
