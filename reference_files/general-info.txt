@@ -1,6 +1,0 @@
-When a variable is immutable, once a value is bound to a name, you can’t change that value.
-
-Rust nudges you to write code in a way that takes advantage of the safety and easy concurrency.
-
-That means that when you’re reading and writing code, you don’t have to keep track of how and where a value might change. Your code is thus easier to reason through.
-
