@@ -1,37 +1,67 @@
-## Welcome to GitHub Pages
+# Rust Programming
 
-You can use the [editor on GitHub](https://github.com/saura8h/rust/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Install
 
-### Markdown
++ Create `rust` directory `$HOME/.config/`
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
++ Add the following in `.zshrc`:
 
-```markdown
-Syntax highlighted code block
+  ```
+  export RUSTUP_HOME=$HOME/.config/rust/rustup
+  export CARGO_HOME=$HOME/.config/rust/cargo
+  ```
 
-# Header 1
-## Header 2
-### Header 3
+  | Environment Variable  | Directory                    |  Description             |
+  |:---------------------:|:----------------------------:|:------------------------:|
+  | `RUSTUP_HOME`         | `$HOME/.config/rust/rustup`  | metadata and toolchains  |
+  | `CARGO_HOME`          | `$HOME/.config/rust/cargo`   | package manager          |
 
-- Bulleted
-- List
++ Install Rust
 
-1. Numbered
-2. List
+  `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
-**Bold** and _Italic_ and `Code` text
+  Executables for `cargo`, `rustc`, `rustup` and other commands will be located in:
+  `$HOME/.config/rust/cargo/bin`
 
-[Link](url) and ![Image](src)
-```
++ Restart terminal and verify the above `cargo`, `rustc`, and `rustup` directory:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+  ```
+  which cargo
+  which rustc
+  which rustup
+  ```
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/saura8h/rust/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### (Minimal) Emacs Configuration for Rust
 
-### Support or Contact
++ Add stable repository for MELPA in `init.el`:
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+  ```
+  (require 'package)
+  (add-to-list 'package-archives
+               '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+  (package-initialize)
+  ```
+
++ Fetch package list:
+
+  `M-x package-refresh-contents`
+
++ Install `rust-mode` so that `.rs` files are **not** in 'Fundamental' mode:
+
+  ```
+  M-x package-install RET
+  rust-mode RET
+  ```
+
+  **Or** using Emacs GUI:
+
+  + `M-x list-packages RET`
+
+  + `C-s rust-mode C-s` ... (press `RET` once the cursor is at rust-mode under "Packages")
+
+  + Go to the beginning of the line and press `i` to mark the package(s) for installation
+
+  + Press `x` to install the selected package(s)
+
