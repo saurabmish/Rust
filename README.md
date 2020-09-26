@@ -65,3 +65,17 @@
 
   + Press `x` to install the selected package(s)
 
+
+### CLI Commands
+
++ Create directory for a program:
+
+  `mkdir hello_world && cd hello_world`
+
++ Compile the file to get an executable:
+
+  `rustc main.rs`
+
++ Execute the binary executable:
+
+  `./main`
