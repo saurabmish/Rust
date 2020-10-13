@@ -3,7 +3,7 @@
 
 ### Install
 
-+ Create `rust` directory `$HOME/.config/`
++ Create `rust` directory in `$HOME/.config/`
 
 + Add the following in `.zshrc`:
 
@@ -84,7 +84,7 @@ Cargo is Rust's build system and package manager and is used for project managem
   This will create an executable in `target/release` instead of `target/debug`, which can be benchmarked with `./target/release/hello_cargo`
 
 
-### (Minimal) Emacs Configuration for Rust
+### (Minimal) Emacs Configuration
 
 + Add stable repository for MELPA in `init.el`:
 
