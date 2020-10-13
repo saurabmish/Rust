@@ -10,7 +10,7 @@
   ```
   export RUSTUP_HOME=$HOME/.config/rust/rustup
   export CARGO_HOME=$HOME/.config/rust/cargo
-  export PATH=$XDG_CONFIG_HOME/rust/cargo/bin:$PATH
+  export PATH=$HOME/.config/rust/cargo/bin:$PATH
   ```
 
   | Environment Variable  | Directory                    |  Description             |
