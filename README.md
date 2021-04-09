@@ -8,15 +8,15 @@
 + Add the following in `.zshrc`:
 
   ```
-  export RUSTUP_HOME=$HOME/.config/rust/rustup
-  export CARGO_HOME=$HOME/.config/rust/cargo
-  export PATH=$HOME/.config/rust/cargo/bin:$PATH
+  export RUSTUP_HOME=$XDG_CACHE_HOME/rust/rustup
+  export CARGO_HOME=$XDG_DATA_HOME/rust/cargo
+  export PATH=$CARGO_HOME/bin:$PATH
   ```
 
-  | Environment Variable  | Directory                    |  Description             |
-  |:---------------------:|:----------------------------:|:------------------------:|
-  | `RUSTUP_HOME`         | `$HOME/.config/rust/rustup`  | metadata and toolchains  |
-  | `CARGO_HOME`          | `$HOME/.config/rust/cargo`   | package manager          |
+  | Environment Variable  | Directory                     |  Description             |
+  |:---------------------:|:-----------------------------:|:------------------------:|
+  | `RUSTUP_HOME`         | `$XDG_CACHE_HOME/rust/rustup` | metadata and toolchains  |
+  | `CARGO_HOME`          | `$XDG_DATA_HOME/rust/cargo`   | package manager          |
 
 + Install Rust
 
@@ -35,12 +35,6 @@
 
 
 ### CLI Commands
-
-+ Create directory for the program:
-
-  `mkdir hello_world && cd hello_world`
-
-+ Source code has to be in `main.rs`
 
 + Compile the file to get an executable:
 
