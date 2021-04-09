@@ -3,9 +3,9 @@ use std::cmp::Ordering;
 use rand::Rng;
 
 fn main() {
-    let secret_number = rand::thread_rng().gen_range(1, 101);
+    let secret_number = rand::thread_rng().gen_range(1, 11);
 
-    println!("Guess a number between 1 and 100");
+    println!("Guess a number between 1 and 10");
     
     let mut guess = String::new();
 
@@ -23,4 +23,3 @@ fn main() {
         Ordering::Greater => println!("Your guess was too big!!!"),
     }
 }
-
